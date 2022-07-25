@@ -1,3 +1,8 @@
+screens1/
+constants/
+App copy.js
+App copy 2.js
+components copy/
 node_modules/
 .expo/
 dist/
@@ -9,6 +14,5 @@ npm-debug.*
 *.mobileprovision
 *.orig.*
 web-build/
-
 # macOS
 .DS_Store
