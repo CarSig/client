@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { StyleSheet, Text, Touchable, TouchableOpacity, View } from 'react-native';
 import * as Font from 'expo-font'
 import AppLoading from 'expo-app-loading';
-import Home from "./Views/Home";
+import Navigator from './routes/drawer';
 
 
 const getFonts = () => Font.loadAsync({
@@ -17,7 +17,7 @@ const App = () => {
 
     if (fontsLoaded) {
         return (
-            <Home />
+            <Navigator />
         );
     } else {
         return (
