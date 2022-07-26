@@ -14,7 +14,7 @@ const RootDrawerNavigator = createDrawerNavigator({
     Filters: {
         screen: FiltersStack,
     },
-    Filters: {
+    Settings: {
         screen: SettingsStack,
     },
 });

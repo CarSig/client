@@ -1,7 +1,7 @@
 import React, { useRef, useState } from "react";
 import { StyleSheet, Text, Touchable, TouchableOpacity, View, FlatList } from 'react-native';
 import { globalStyles } from '../styles/global';
-import { dummyTransactions } from "./transactionsTEMP"
+import { dummyTransactions, uniqueCategories } from "./transactionsTEMP"
 
 
 const Home = ({ navigation }) => {
@@ -18,7 +18,7 @@ const Home = ({ navigation }) => {
         <View style={globalStyles.container}>
 
 
-            <FlatList data={categories} renderItem={({ item }) => (
+            <FlatList data={uniqueCategories} renderItem={({ item }) => (
                 <TouchableOpacity onPress={() => navigation.navigate('CategoryView', item)}>
                     <Text style={globalStyles.titleText}>{item.category}</Text>
                 </TouchableOpacity>
