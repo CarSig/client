@@ -1,14 +1,16 @@
 import { createStackNavigator } from 'react-navigation-stack';
 import Home from '../screens/Home';
 import CategoryView from '../screens/CategoryView';
+import Header from '../componentsShared/Header';
+import React from 'react';
 
 
 
 const screens = {
     Home: {
         screen: Home,
-        navigationOptions: {
-            title: 'Straten Strategie',
+        navigationOptions: ({ navigation }) => {
+            return { headerTitle: () => <Header navigation={navigation} title="Home" /> }
         }
     },
     CategoryView: {

@@ -1,12 +1,13 @@
 import { createStackNavigator } from 'react-navigation-stack';
 import Settings from '../screens/SettingsView';
+import Header from '../componentsShared/Header';
 
 const screens = {
     Settings: {
         screen: Settings,
-        navigationOptions: {
-            title: 'Settings Straten Strategie'
-        },
+        navigationOptions: ({ navigation }) => {
+            return { headerTitle: () => <Header navigation={navigation} title="Settings" /> }
+        }
     },
 }
 

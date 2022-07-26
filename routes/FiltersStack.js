@@ -1,12 +1,13 @@
 import { createStackNavigator } from 'react-navigation-stack';
 import Filters from '../screens/FiltersView';
+import Header from '../componentsShared/Header';
 
 const screens = {
     Filters: {
         screen: Filters,
-        navigationOptions: {
-            title: 'Settings Straten Strategie'
-        },
+        navigationOptions: ({ navigation }) => {
+            return { headerTitle: () => <Header navigation={navigation} title="Filters" /> }
+        }
     },
 }
 
